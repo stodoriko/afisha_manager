@@ -1,9 +1,12 @@
-package ru.netology.java;
+package ru.netology.java.manager;
+
+import lombok.Data;
+import ru.netology.java.domain.FilmInfo;
 
 public class AfishaManager {
 
     private int countFilms = 10;
-    private FilmInfo[] films = new FilmInfo[countFilms]; // пустой массив
+    private FilmInfo[] films = new FilmInfo[countFilms];
 
 
     public AfishaManager() {
@@ -34,10 +37,9 @@ public class AfishaManager {
         int counter = 0;
         for (int i = 0; i < countFilms; i++) {
             int index = films.length - i - 1;
-            if (films[index] != null) {
-                result[counter] = films[index];
-                counter++;
-            }
+            result[counter] = films[index];
+            counter++;
+
         }
         FilmInfo[] finalResult = new FilmInfo[counter];
         System.arraycopy(result, 0, finalResult, 0, counter);

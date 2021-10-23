@@ -2,12 +2,14 @@ package ru.netology.java;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.netology.java.domain.FilmInfo;
+import ru.netology.java.manager.AfishaManager;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class AfishaManagerTest {
+public class AfishaManagerNoArgsTest {
 
-    AfishaManager afishaManager = new AfishaManager(5);
+    AfishaManager afishaManager = new AfishaManager();
 
     FilmInfo first = new FilmInfo(1, "Боевик", "Крепкий орешек", false);
     FilmInfo second = new FilmInfo(2, "Комедия", "Один дома", true);
@@ -37,13 +39,8 @@ public class AfishaManagerTest {
     @Test
     public void shouldSave() {
         afishaManager.addFilm(first);
-        afishaManager.addFilm(second);
-        afishaManager.addFilm(third);
-        afishaManager.addFilm(fourth);
-        afishaManager.addFilm(fifth);
-
         FilmInfo[] expected = new FilmInfo[] {
-                fifth, fourth, third, second, first
+                first, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second
         };
         FilmInfo[] actual = afishaManager.getFilms();
         assertArrayEquals(expected, actual);
@@ -53,7 +50,7 @@ public class AfishaManagerTest {
     public void shouldGetAll() {
         FilmInfo[] actual = afishaManager.getFilms();
         FilmInfo[] expected = {
-                tenth, ninth, eighth, seventh, sixth
+                tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first
         };
         assertArrayEquals(expected, actual);
     }
