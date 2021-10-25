@@ -2,8 +2,6 @@ package ru.netology.java;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.java.domain.FilmInfo;
-import ru.netology.java.manager.AfishaManager;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 

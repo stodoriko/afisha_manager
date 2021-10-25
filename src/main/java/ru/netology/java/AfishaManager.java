@@ -1,7 +1,4 @@
-package ru.netology.java.manager;
-
-import lombok.Data;
-import ru.netology.java.domain.FilmInfo;
+package ru.netology.java;
 
 public class AfishaManager {
 
