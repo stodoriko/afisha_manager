@@ -1,4 +1,4 @@
-package ru.netology.java;
+package ru.netology.java.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

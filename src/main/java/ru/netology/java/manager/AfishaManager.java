@@ -1,4 +1,6 @@
-package ru.netology.java;
+package ru.netology.java.manager;
+
+import ru.netology.java.domain.FilmInfo;
 
 public class AfishaManager {
 
